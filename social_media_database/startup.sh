@@ -154,3 +154,12 @@ echo "To use with Node.js viewer, run: source db_visualizer/postgres.env"
 echo "To connect to the database, use one of the following commands:"
 echo "psql -h localhost -U ${DB_USER} -d ${DB_NAME} -p ${DB_PORT}"
 echo "$(cat db_connection.txt)"
+
+# Initialize schema and seed data
+echo ""
+echo "Running schema initialization and seed data..."
+bash "$(dirname "$0")/sql_init.sh" || {
+  echo "Schema initialization failed. You can retry by running: bash social_media_database/sql_init.sh"
+  exit 1
+}
+echo "Schema initialized successfully."
