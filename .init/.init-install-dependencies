@@ -1,0 +1,4 @@
+{
+    "command": "cd db_visualizer && npm install",
+    "working_directory": "/tmp/kavia/workspace/code-generation/dashboard-navigation-and-user-interface-811-821/social_media_database"
+}
